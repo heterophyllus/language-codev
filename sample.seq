@@ -1,0 +1,30 @@
+!**************************************************************
+! Sequence : sample.seq
+!
+! Purpose  : Sample macro for CodeV language support in Atom
+!
+! Author   : Hiiragi       Date: 2019-12-15
+!**************************************************************
+
+LCL NUM ^s ^temp                              ! storages and user defined variables
+LCL STR ^filename
+GBL NUM ^array(18)
+
+RFD ''
+^filename == #1
+
+if ^filename = ''                             ! if condition
+   WRI "Invalid filename"                     ! double quotation
+   RTN                                        ! command
+els if locstr(^filename, '.') = 0             ! built-in function
+   ^filename == concat(^filename, '.seq')
+end if
+
+RUN ^filename
+
+NFO 3; FFO -0.1; IFO 0.1                      ! semicolon
+
+for ^s 1 (NUM S)                              ! for loop
+   ^temp == (OAL S^s..i R2 F1 ZL)             ! qualifiers
+   WRI Q"'2d' '2d.2d'" ^s @myfunction(^temp)  ! user defined function
+end for

@@ -1,0 +1,10 @@
+{
+  "name": "language-CodeV",
+  "description": "CodeV Macro-Plus language support in Atom",
+  "version": "0.0.0",
+  "engines": {
+    "atom": "*"
+  },
+  "repository": "https://github.com/heterophyllus/language-CodeV",
+  "license": "MIT"
+}
