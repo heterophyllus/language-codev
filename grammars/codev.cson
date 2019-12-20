@@ -5,28 +5,71 @@
 'scopeName': 'source.codev'
 'fileTypes': [
    'seq'
+   'SEQ'
 ]
 'patterns': [
    {
-      'include': '#basics'
+      'match': '!.*$'
+      'name': 'comment.line.codev'
    }
    {
-      'include': '#comments'
+      'match': '(?<=[\\s\\-\\+\\*\\/\\\\=:\\(,]|^)\\d*\\.?\\d+([eE][+-]?\\d)?([0-9&&[^\\.]])*\\b'
+      'name': 'constant.numeric.codev'
    }
    {
-      'include': '#strings'
+      'begin': '\''
+      'end': '\''
+      'name': 'string.quoted.single.codev'
    }
    {
-      'include': '#controls'
+      'begin': '\"'
+      'end': '\"'
+      'name': 'string.quoted.double.codev'
    }
    {
-      'include': '#storages'
+      'match': '\\$\\w+\\b'
+      'name': 'string.interpolated.codev'
+   }
+   {
+      'comment': 'user defined variable'
+      'match': '(\\^)([a-zA-Z][a-zA-Z0-9_]*)\\b'
+      'captures':
+         '1':
+            'name': 'punctuation.definition.variable.other.codev'
+         '0':
+            'name': 'variable.other.codev'
+   }
+   {
+      'comment': 'invalid variable'
+      'match': '(\\^)([_0-9]\\w*)\\b'
+      'name': 'invalid.illegal.variable.other.codev'
+   }
+   {
+      'match': '(^|;|\\(|\\s)((?i)IF|ELSE|ELS|WHI|FOR|UNT|END|GOT|LBL|FCT)\\b'
+      'captures':
+         '2':
+            'name': 'keyword.control.codev'
+   }
+   {
+      'match': '(^|;|\\(|\\s)((?i)true|false|yes|no|or|and)\\b'
+      'captures':
+         '2':
+            'name': 'constant.language.codev'
+   }
+   {
+      'match': '(^|;|\\(|\\s)((?i)LCL|GBL)\\b'
+      'captures':
+         '2':
+            'name': 'storage.modifier.codev'
+   }
+   {
+      'match': '(^|;|\\(|\\s)((?i)NUM|STR)\\b'
+      'captures':
+         '2':
+            'name': 'storage.type.codev'
    }
    {
       'include': '#qualifiers'
-   }
-   {
-      'include': '#variables'
    }
    {
       'include': '#commands'
@@ -36,80 +79,6 @@
    }
 ]
 'repository':
-   'basics':
-      'patterns': [
-         {
-            'match': '(?<=[\\s\\-\\+\\*\\/\\\\=:\\(,]|^)\\d*\\.?\\d+([eE][+-]?\\d)?([0-9&&[^\\.]])*(i|j)?\\b'
-            'name': 'constant.numeric.codev'
-         }
-      ]
-   'comments':
-      'patterns':[
-         {
-            'match': '!.*$'
-            'name': 'comment.line.codev'
-         }
-      ]
-   'strings':
-      'patterns':[
-         {
-            'begin': '\''
-            'end': '\''
-            'name': 'string.quoted.single.codev'
-         }
-         {
-            'begin': '\"'
-            'end': '\"'
-            'name': 'string.quoted.double.codev'
-         }
-         {
-            'match': '\\$\\w+\\b'
-            'name': 'string.interpolated.codev'
-         }
-      ]
-   'controls':
-      'patterns':[
-         {
-            'match': '(^|;|\\(|\\s)((?i)IF|ELSE|ELS|WHI|FOR|UNT|END|GOT|LBL|FCT)\\b'
-            'name': 'keyword.control.codev'
-         }
-         {
-            'match': '(^|;|\\(|\\s)((?i)true|false|yes|no|or|and)\\b'
-            'name': 'constant.language.codev'
-         }
-      ]
-   'storages':
-      'patterns':[
-         {
-            'match': '(^|;|\\(|\\s)((?i)LCL|GBL)\\b'
-            'captures':
-               '2':
-                  'name': 'storage.modifier.codev'
-         }
-         {
-            'match': '(^|;|\\(|\\s)((?i)NUM|STR)\\b'
-            'captures':
-               '2':
-                  'name': 'storage.type.codev'
-         }
-      ]
-   'variables':
-      'patterns':[
-         {
-            'comment': 'user defined variable'
-            'match': '(\\^)([a-zA-Z][a-zA-Z0-9_]*)\\b'
-            'captures':
-               '1':
-                  'name': 'punctuation.definition.variable.other.codev'
-               '0':
-                  'name': 'variable.other.codev'
-         }
-         {
-            'comment': 'invalid variable'
-            'match': '(\\^)([_0-9]\\w*)\\b'
-            'name': 'invalid.illegal.variable.other.codev'
-         }
-      ]
    'qualifiers':
       'patterns':[
          {
