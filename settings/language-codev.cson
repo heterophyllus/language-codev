@@ -1,5 +1,5 @@
 '.source.codev':
    'editor':
       'commentStart': '! '
-      'increaseIndentPattern': '^\\s*\\b(if|els|(els if)|for|whi|unt)\\b'
-      'decreaseIndentPattern': '^\\s*\\b(end\\s+\\w*|els|(els if))\\b'
+      'increaseIndentPattern': '^\\s*\\b((?i)if|els|(els if)|for|whi|unt)\\b'
+      'decreaseIndentPattern': '^\\s*\\b((?i)(end\\s+\\w*)|els|(els\\s+if))\\b'
