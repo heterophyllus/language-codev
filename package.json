@@ -1,5 +1,5 @@
 {
-  "name": "language-CodeV",
+  "name": "language-codev",
   "description": "CodeV Macro-Plus language support in Atom",
   "version": "0.0.0",
   "engines": {
