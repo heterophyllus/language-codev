@@ -1,0 +1,436 @@
+'.source.codev':
+	'Absolute Value':
+		'prefix': 'ABSF'
+		'body': 'ABSF(${1:expr})'
+	'Arccosine':
+		'prefix': 'ACOSF'
+		'body': 'ACOSF(${1:expr})'
+	'Arcsine':
+		'prefix': 'ASINF'
+		'body': 'ASINF(${1:expr})'
+	'Arctangent':
+		'prefix': 'ATANF'
+		'body': 'ATANF(${1:expr})'
+	'Cosine':
+		'prefix': 'COSF'
+		'body': 'COSF(${1:expr})'
+	'Exponential':
+		'prefix': 'EXPF'
+		'body': 'EXPF(${1:expr})'
+	'Natural Logarithm':
+		'prefix': 'LOGF'
+		'body': 'LOGF(${1:expr})'
+	'Common Logarithm':
+		'prefix': 'LOG10F'
+		'body': 'LOG10F(${1:expr})'
+	'Maximum':
+		'prefix': 'MAXF'
+		'body': 'MAXF(${1:expr1},${2:expr2})'
+	'Minimum of exp1 and exp2':
+		'prefix': 'MINF'
+		'body': 'MINF(${1:expr1},${2:expr2})'
+	'Remainder of ${1:expr1} by ${2:expr2}':
+		'prefix': 'MODF'
+		'body': 'MODF(${1:expr1},${2:expr2})'
+	'Return random value [0..1)':
+		'prefix': 'RANDF'
+		'body': 'RANDF'
+	'Round to integer':
+		'prefix': 'ROUNDF'
+		'body': 'ROUNDF(${1:expr1})'
+	'absf(expr1)*sign(expr2)':
+		'prefix': 'SIGNF'
+		'body': 'SIGNF(${1:expr1},${2:expr2})'
+	'Sine':
+		'prefix': 'SINF'
+		'body': 'SINF(${1:expr1})'
+	'Square root':
+		'prefix': 'SQRTF'
+		'body': 'SQRTF(${1:expr1})'
+	'Tangent':
+		'prefix': 'TANF'
+		'body': 'TANF(${1:expr1})'
+	'Fitting to Fringe Zernike polynomial':
+		'prefix': 'ZFRFIT'
+		'body': 'ZFRFIT(${1:num_points},${2:x},${3:y},${4:num_terms},${5:coefs})'
+	'Fitting to Normal Zernike polynomial':
+		'prefix': 'ZRNFIT'
+		'body': 'ZRNFIT(${1:num_points},${2:x},${3:y},${4:num_terms},${5:coefs})'
+	'Compute coordinates and weights for Gaussian quadrature':
+		'prefix': 'GAUSSWTS'
+		'body': 'GAUSSWTS(${1:num_input_pts},${2:input_coords},${3:input_wts},${4:num_quad_pts},${5:quad_coords},${6:quad_wts})'
+	'ABCD matrix':
+		'prefix': 'ABCD'
+		'body': 'ABCD(${1:zoom},${2:wave},${3:field},${4:surface_start}, ${5:surface_end}, ${6:start_ray_config_arr}, ${7:final_ray_config_arr}, ${8:output_arr})'
+	'Tolerance sensitivity analysis using current set of tolerance and compensator':
+		'prefix': 'AS_BUILT_ABC'
+		'body': 'AS_BUILT_ABC(${1:zoom},${2:field},${3:NRD},${4:output_type},${5:cross_terms},${6:linear_terms})'
+	'Return TOR output using current set of tolerance and compensator':
+		'prefix': 'AS_BUILT_VAR'
+		'body': 'AS_BUILT_VAR(${1:zoom},${2:field},${3:NRD},${4:output_type})'
+	'Bestfit spherical radius':
+		'prefix': 'BESTSPH'
+		'body': 'BESTSPH(${1:surface},${2:zoom},${3:min_height},${4:max_height})'
+	'Convert field type':
+		'prefix': 'CNVTFIELD'
+		'body': 'CNVTFIELD(${1:field_type})'
+	'Evaluate Zernike polynomials and compute the value at (x,y)':
+		'prefix': 'EVALZERN'
+		'body': 'EVALZERN(${1:wave},${2:field},${3:zoom},${4:x},${5:y},${6:pol_type},${7:output_string},${8:zernike_type})'
+	'Evaluate Zernike polynomials and compute the RMS error':
+		'prefix': 'FITERROR'
+		'body': 'FITERROR(${1:wave},${2:field},${3:zoom},${4:pol_type},${5:output_string},${6:zernike_type})'
+	'Trace a slow Gaussianbeam through an optical system and calculate at the specified surface the beamradius, beam orientation, wavefront radiusof curvature, waist position and waist radius':
+		'prefix': 'GAUSSBEAM'
+		'body': 'GAUSSBEAM(${1:surface},${2:zoom},${3:field},${4:wave},${5:input_arr},${6:output_string})'
+	'Refractive index at (x,y,x) of gradientindex material':
+		'prefix': 'INDEX'
+		'body': 'INDEX(${1:surface},${2:zoom},${3:field},${4:wave},${5:glass},${6:x},${7:y},${8:z})'
+	'Verifies Finite Element Analysis (FEA) software is creating correct .INT files':
+		'prefix': 'INT_DEPART'
+		'body': 'INT_DEPART(${1:surface},${2:zoom},${3:x},${4:y},${5:nor|sag})'
+	'Compute MTF':
+		'prefix': 'MTF_1FLD'
+		'body': 'MTF_1FLD(${1:zoom},${2:field},${3:frequency},${4:azimuth},${5:NRD},${6:output_arr},${7:dif|geo},${8:sin|sqw})'
+	'Normalized radius generated with ZERNIKE, ZFRCOEF':
+		'prefix': 'NORMRADIUS'
+		'body': 'NORMRADIUS(${1:wave},${2:field},${3:zoom},${4:pol_type},${5:output_string},${6:zernike_type})'
+	'Trace grid of rays and return the polarization property at the image surface':
+		'prefix': 'POLGRID'
+		'body': 'POLGRID(${1:zoom},${2:wave},${3:field},${4:aper_check},${5:num_rays},${6:input_arr},${7:output_arr})'
+	'Compute point spread function':
+		'prefix': 'PSF_1FLD'
+		'body': 'PSF_1FLD(${1:zoom},${2:field},${3:wave},${4:TGR}, ${5:PGR},${6:NRD},${7:GRI},${8:PRO},${9:XSC},${10:PHA},${11:norm},${12:THR},${13:output_array})'
+	'Compute point spread function with intensity of each pixel':
+		'prefix': 'PSF_DATA_1FLD'
+		'body': 'PSF_DATA_1FLD(${1:zoom},${2:field},${3:wave},${4:TGR}, ${5:PGR},${6:NRD},${7:GRI},${8:PRO},${9:XSC},${10:PHA},${11:norm},${12:THR},${13:output_array},${14:data_array})'
+	'Perform faster ray tracing with more outputs than RAYTRA':
+		'prefix': 'RAYPOL'
+		'body': 'RAYPOL(${1:zoom},${2:wave},${3:field},${4:aper_check},${5:num_rays},${6:input_arr},${7:output_arr})'
+	'Perform RSI ray tracing':
+		'prefix': 'RAYRSI'
+		'body': 'RAYRSI(${1:zoom},${2:wave},${3:field},${4:ref_surf},${5:input_arr})'
+	'Perform SIN ray tracing':
+		'prefix': 'RAYSIN'
+		'body': 'RAYSIN(${1:zoom},${2:wave},${3:x_tan},${4:y_tan},${5:x_dir_tan},${6:y_dir_tan})'
+	'Perform SIN ray tracing towards the image surface':
+		'prefix': 'RAYTRA'
+		'body': 'RAYTRA(${1:zoom},${2:wave},${3:aper_check},${4:input_arr},${5:output_arr})'
+	'Compute RMS spot size':
+		'prefix': 'RMSSPOT'
+		'body': 'RMSSPOT(${1:zoom},${2:field},${3:defocus},${4:RTL|NRD})'
+	'Compute RMS wavefront error at all fields':
+		'prefix': 'RMSWE'
+		'body': 'RMSWE(${1:zoom},${2:wave},${3:NRD},${4:output_arr},${5:focus})'
+	'Compute RMS wavefront error':
+		'prefix': 'RMS_1FLD'
+		'body': 'RMS_1FLD(${1:zoom},${2:field},${3:wave},${4:NRD},${5:output_arr}.${6:focus})'
+	'Sag of the surface at (x,y)':
+		'prefix': 'SAGF'
+		'body': 'SAGF(${1:surface},${2:zoom},${3:x_coord},${4:y_coord})'
+	'Compute surface astigmatism':
+		'prefix': 'SASF'
+		'body': 'SASF(${1:surface},${2:zoom},${3:x},${4:y},${5:output_arr})'
+	'Compute sag, 1st and 2nd derivatives':
+		'prefix': 'SDERIVF'
+		'body': 'SDERIVF(${1:surface},${2:zoom},${3:x_coord},${4:y_coord},${5:output_arr})'
+	'Compute spot size':
+		'prefix': 'SPOTDATA'
+		'body': 'SPOTDATA(${1:zoom},${2:field},${3:defocus},${4:RTL|NRD},${5:reference},${6:x_shift},${7:y_shift},${8:output_arr})'
+	'Compute variance of the sag difference from the input curvature for specified points':
+		'prefix': 'SURFSAGD'
+		'body': 'SURFSAGD(${1:surface},${2:zoom},${3:curvature},${4:x_array_input},${5:y_array_input},${6:output_array})'
+	'Compute the transmission and projected solid angle at the object using TRA':
+		'prefix': 'TRA_1FLD'
+		'body': 'TRA_1FLD(${1:zoom},${2:x_fld},${3:y_fld},${4:NRD},${5:geo_or_stoke},${6:grid_scale_fact},${7:pol_input},${8:output_array})'
+	'Transform local coordinate from a surface to another':
+		'prefix': 'TRANSFORM'
+		'body': 'TRANSFORM(${1:surface},${2:ref_surface},${3:zoom},${4:trans_data})'
+	'Compute Zernike fit coefficients':
+		'prefix': 'ZERNIKE'
+		'body': 'ZERNIKE(${1:wave},${2:field},${3:zoom},${4:coef},${5:num_rays_across_dia},${6:num_terms},${7:pupil_type},${8:pol_type},${9:int_or_phase},${10:zernike_type})'
+	'Compute Zernike fit coefficients using radial grid based on Gaussian quadrature':
+		'prefix': 'ZERNIKEGQ'
+		'body': 'ZERNIKEGQ(${1:wave},${2:field},${3:zoom},${4:coef},${5:num_terms},${6:pupil_type},${7:pol_type},${8:int_or_phase},${9:zernike_type})'
+	'Compute Fringe Zernike fit coefficients':
+		'prefix': 'ZFRCOEF'
+		'body': 'ZFRCOEF(${1:wave},${2:field},${3:zoom},${4:coef},${5:num_rays_across_dia},${6:num_terms},${7:pupil_coord_type})'
+	'Add imageA and imageB':
+		'prefix': 'ImageAdd'
+		'body': 'ImageAdd(${1:imageA},${2:imageB},${3:output_image})'
+	'Add constant value to the image, overwrite the original image':
+		'prefix': 'ImageAddConstantTo'
+		'body': 'ImageAddConstantTo(${1:imageA},${2:constVal})'
+	'Gamma correction':
+		'prefix': 'ImageChangeGamma'
+		'body': 'ImageChangeGamma(${1:image},${2:gammaValue})'
+	'Image clipping':
+		'prefix': 'ImageClip'
+		'body': 'ImageClip(${1:image},${2:maxValue},${3:minValue},${4:component})'
+	'Combine 3 image to a single one':
+		'prefix': 'ImageCombineComponents'
+		'body': 'ImageCombineComponents(${1:redImage},${2:greenImage},${3:blueImage},${4:colorImage})'
+	'Copy image':
+		'prefix': 'ImageCopy'
+		'body': 'ImageCopy(${1:inputImage},${2:outputImage})'
+	'Delete image':
+		'prefix': 'ImageDelete'
+		'body': 'ImageDelete(${1:image})'
+	'Display image on the new window':
+		'prefix': 'ImageDisplay'
+		'body': 'ImageDisplay(${1:image},${2:scaling})'
+	'Extract monochrome image from RGB image':
+		'prefix': 'ImageExtractComponent'
+		'body': 'ImageExtractComponent(${1:RGBImage},${2:monochromeImage},${3:channel})'
+	'Flip image (X direction)':
+		'prefix': 'ImageFlipX'
+		'body': 'ImageFlipX(image)'
+	'Flip image (Y direction)':
+		'prefix': 'ImageFlipY'
+		'body': 'ImageFlipY(image)'
+	'Write data from 2D array to image':
+		'prefix': 'ImageFromArray'
+		'body': 'ImageFromArray(${1:inputArray},${2:monochromeImage})'
+	'Get the average value of the pixels in each channel of a color image':
+		'prefix': 'ImageGetAverageValueColor'
+		'body': 'ImageGetAverageValueColor(${1:image},${2:aveArray})'
+	'Get the average value of the pixels in each channel of a monochrome image':
+		'prefix': 'ImageGetAverageValueMonochrome'
+		'body': 'ImageGetAverageValueMonochrome(${1:image},${2:aveArray})'
+	'Get the maximum value of the pixels in each channel of a color image':
+		'prefix': 'ImageGetMaxValueColor'
+		'body': 'ImageGetMaxValueColor(${1:image},${2:maxArray})'
+	'Get the maximum value of the pixels in each channel of a monochrome image':
+		'prefix': 'ImageGetMaxValueMonochrome'
+		'body': 'ImageGetMaxValueMonochrome(${1:image},${2:maxArray})'
+	'Get the minimum value of the pixels in each channel of a color image':
+		'prefix': 'ImageGetMinValueColor'
+		'body': 'ImageGetMinValueColor(${1:image},${2:minArray})'
+	'Get the minimum value of the pixels in each channel of a monochrome image':
+		'prefix': 'ImageGetMinValueMonochrome'
+		'body': 'ImageGetMinValueMonochrome(${1:image},${2:minArray})'
+	'Get the sum of the value of the pixels in each channel of a color image':
+		'prefix': 'ImageGetSumOfValuesColor'
+		'body': 'ImageGetSumOfValuesColor(${1:image},${2:sumArray(3)})'
+	'Get the sum of the value of the pixels in each channel of a monochrome image':
+		'prefix': 'ImageGetSumOfValuesMonochrome'
+		'body': 'ImageGetSumOfValuesMonochrome(${1:image},${2:sumArray(3)})'
+	'Copy all meta data':
+		'prefix': 'ImageMDCopy'
+		'body': 'ImageMDCopy(${1:fromImage},${2:toImage})'
+	'Copy wavelengths and weights':
+		'prefix': 'ImageMDCopyWavelengthsAndWeights'
+		'body': 'ImageMDCopyWavelengthsAndWeights(${1:sourceImage},${2:destinationImage})'
+	'Get CME':
+		'prefix': 'ImageMDGetCME'
+		'body': 'ImageMDGetCME(${1:image})'
+	'Get string that was assigned with ImageMDSetDescriptor':
+		'prefix': 'ImageMDGetDescriptor'
+		'body': 'ImageMDGetDescriptor(${1:image})'
+	'Get DEX':
+		'prefix': 'ImageMDGetDEX'
+		'body': 'ImageMDGetDEX(${1:image})'
+	'Get DEY':
+		'prefix': 'ImageMDGetDEY'
+		'body': 'ImageMDGetDEY(${1:image})'
+	'Get X offset of the center of the object within the field of view of the lens':
+		'prefix': 'ImageMDGetFieldOffsetX'
+		'body': 'ImageMDGetFieldOffsetX(${1:image})'
+	'Get Y offset of the center of the object within the field of view of the lens':
+		'prefix': 'ImageMDGetFieldOffsetY'
+		'body': 'ImageMDGetFieldOffsetY(${1:image})'
+	'Get field rotation':
+		'prefix': 'ImageMDGetFieldRotation'
+		'body': 'ImageMDGetFieldRotation(${1:image})'
+	'Get field units':
+		'prefix': 'ImageMDGetFieldUnits'
+		'body': 'ImageMDGetFieldUnits(${1:image})'
+	'Get gamma value':
+		'prefix': 'ImageMDGetGamma'
+		'body': 'ImageMDGetGamma(${1:image})'
+	'Get GRI value':
+		'prefix': 'ImageMDGetGRI'
+		'body': 'ImageMDGetGRI(${1:image})'
+	'Get pixel size':
+		'prefix': 'ImageMDGetImagePixelSize'
+		'body': 'ImageMDGetImagePixelSize(${1:image})'
+	'Get the image semi-diagonal measurement':
+		'prefix': 'ImageMDGetImageSemiDiagonal'
+		'body': 'ImageMDGetImageSemiDiagonal(${1:image})'
+	'Get the lens name':
+		'prefix': 'ImageMDGetLensName'
+		'body': 'ImageMDGetLensName(${1:image})'
+	'Get NRD':
+		'prefix': 'ImageMDGetNRD'
+		'body': 'ImageMDGetNRD(${1:image})'
+	'Get number of pixels along x direction':
+		'prefix': 'ImageMDGetNumXPixels'
+		'body': 'ImageMDGetNumXPixels(${1:image})'
+	'Get number of pixels along y direction':
+		'prefix': 'ImageMDGetNumYPixels'
+		'body': 'ImageMDGetNumYPixels(${1:image})'
+	'Get number of wavelength of each channel of color image, or luminesence of monochrome image':
+		'prefix': 'ImageMDGetNumWavelengths'
+		'body': 'ImageMDGetNumWavelengths'
+	'Get file name of the objet image':
+		'prefix': 'ImageMDGetObjectFileName'
+		'body': 'ImageMDGetObjectFileName(${1:image})'
+	'Get semidiagonal of the objet image':
+		'prefix': 'ImageMDGetObjectSemiDiagonal'
+		'body': 'ImageMDGetObjectSemiDiagonal(${1:image})'
+	'Get offset value of subsequent IMS result':
+		'prefix': 'ImageMDGetOffsetValue'
+		'body': 'ImageMDGetOffsetValue(${1:image})'
+	'Get PMX':
+		'prefix': 'ImageMDGetPMX'
+		'body': 'ImageMDGetPMX(${1:image})'
+	'Get PMY':
+		'prefix': 'ImageMDGetPMY'
+		'body': 'ImageMDGetPMY(${1:image})'
+	'Get the date when IMS was executed':
+		'prefix': 'ImageMDSetSimulationDate'
+		'body': 'ImageMDSetSimulationDate(${1:image},${2:dateString})'
+	'Set symmetry, rotational(ROT) or non-rotational(NON)':
+		'prefix': 'ImageMDSetSym'
+		'body': 'ImageMDSetSym(${1:image},${2:symString})'
+	'Set TGR value':
+		'prefix': 'ImageMDSetTGR'
+		'body': 'ImageMDSetTGR(${1:image},${2:tgrValue})'
+	'Set image title':
+		'prefix': 'ImageMDSetTitle'
+		'body': 'ImageMDSetTitle(${1:image},${2:titleString})'
+	'Set wavelength and weight of one color on a 2D array':
+		'prefix': 'ImageMDSetWavelengthsAndWeights'
+		'body': 'ImageMDSetWavelengthsAndWeights(${1:image},${2:wvlAndWtArray},${3:colorStr},${4:numWavelengths})'
+	'Multiply constant value on the image, overwrite the original image':
+		'prefix': 'ImageMultiplyByConstant'
+		'body': 'ImageMultiplyByConstant(${1:image},${2:constVal})'
+	'Put the value on the pixel of the image':
+		'prefix': 'ImagePutPixelAt'
+		'body': 'ImagePutPixelAt(${1:image},${2:row},${3:column},${4:component},${5:value})'
+	'Read image file':
+		'prefix': 'ImageRead'
+		'body': 'ImageRead(${1:filename},${2:image})'
+	'Read image file and contain as IMG variable':
+		'prefix': 'ImageRestoreFrom'
+		'body': 'ImageRestoreFrom(${1:myfile},${2:image})'
+	'Rotate image and output as new image':
+		'prefix': 'ImageRotate'
+		'body': 'ImageRotate(${1:startingImage},${2:outputImage},${3:rotationAngleDegrees})'
+	'Save image as specified filetype':
+		'prefix': 'ImageSaveAs'
+		'body': 'ImageSaveAs(${1:image},${2:filename},${3:filetype})'
+	'Perform outputImage = imageA - imageB':
+		'prefix': 'ImageSubtract'
+		'body': 'ImageSubtract(${1:imageA},${2:imageB},${3:outputImage})'
+	'Load image data and move to 2D array':
+		'prefix': 'ImageToArray'
+		'body': 'ImageToArray(${1:monochromeImage},${2:outputArray})'
+	'Write image to 16bit or 48 bit PNG':
+		'prefix': 'ImageWrite'
+		'body': 'ImageWrite(${1:filename},${2:image})'
+	'Copy array to buffer':
+		'prefix': 'ARR_TO_BUF'
+		'body': 'ARR_TO_BUF(${1:array},${2:num_rows},${3:num_cols},${4:buf_num})'
+	'Copy buffer to array':
+		'prefix': 'BUF_TO_ARR'
+		'body': 'BUF_TO_ARR(${1:buf_num},${2:array},${3:start_row},${4:end_row},${5:start_col},${6:end_col})'
+	'Perform FFT':
+		'prefix': 'FFTdDts'
+		'body': 'FFTdDts(${1:cen_in},${2:cen_out},${3:fdata},${4:num_rows},${5:num_cols},${6:fwd})'
+	'Creates an array of magnitudes from an array of complex numbers':
+		'prefix': 'GET_COMPLEX_MAGNITUDE'
+		'body': 'GET_COMPLEX_MAGNITUDE(${1:comp},${2:mag},${3:num_mags})'
+	'Get number of rows':
+		'prefix': 'GetDim1Num'
+		'body': 'GetDim1Num(${1:array})'
+	'Get number of columns':
+		'prefix': 'GetDim2Num'
+		'body': 'GetDim2Num(${1:array2D})'
+	'Get imaginary part of complex array':
+		'prefix': 'GET_IMAGINARY_PART'
+		'body': 'GET_IMAGINARY_PART(${1:comp},${2:imag},${3:num_imags})'
+	'Get real part of complex array':
+		'prefix': 'GET_REAL_PART'
+		'body': 'GET_REAL_PART(${1:comp},${2:real},${3:num_reals})'
+	'Create complex array':
+		'prefix': 'PAD_REAL_TO_COMPLEX'
+		'body': 'PAD_REAL_TO_COMPLEX(${1:real},${2:comp},${3:num_reals})'
+	'Change array size':
+		'prefix': 'ReDimNum'
+		'body': 'ReDimNum(${1:array2D},${2:newNumRows},${3:newNumColumns})'
+	'Scale real array':
+		'prefix': 'SCALE_REAL_ARRAY'
+		'body': 'SCALE_REAL_ARRAY(${1:real},${2:scale},${3:num_vals})'
+	'Compute standard deviation of the array':
+		'prefix': 'STDEV'
+		'body': 'STDEV(${1:array},${2:num_vals})'
+	'Singular value decomposition':
+		'prefix': 'SVD'
+		'body': 'SVD(${1:A},${2:rows},${3:cols}.${4:U},${5:V},${6:S})'
+	'Get sum value of all elements in the array':
+		'prefix': 'SUMF'
+		'body': 'SUMF(${1:array},${2:num_vals})'
+	'Concatenate strings':
+		'prefix': 'CONCAT'
+		'body': 'CONCAT(${1:string_expr1},${2:string_expr2})'
+	'Return the first position where the specified string is found':
+		'prefix': 'FIND_STR_ARR'
+		'body': 'FIND_STR_ARR(${1:string},${2:string_array_name})'
+	'Concatenates the strings in the array into a single string with the specified delimiter':
+		'prefix': 'JOIN'
+		'body': 'JOIN(${1:string_array_name},${2:separator_string},${3:string_array_element},${4:num of strings})'
+	'Get length of the string':
+		'prefix': 'LENSTR'
+		'body': 'LENSTR(${1:string_expr})'
+	'Get the starting position of sub-string in the whole string':
+		'prefix': 'LOCSTR'
+		'body': 'LOCSTR(${1:string_expr},${2:sub_string_expr})'
+	'Convert to lower cases':
+		'prefix': 'LOWCASE'
+		'body': 'LOWCASE(${1:string_expr})'
+	'Convert number to a string':
+		'prefix': 'NUM_TO_STR'
+		'body': 'NUM_TO_STR(${1:expr})'
+	'Convert a replacement field entry to a string':
+		'prefix': 'RFSTR'
+		'body': 'RFSTR(${1:expr})'
+	'Convert string to a number':
+		'prefix': 'STR_TO_NUM'
+		'body': 'STR_TO_NUM(${1:string_expr})'
+	'Extract sub string with start and length specified':
+		'prefix': 'SUBSTR'
+		'body': 'SUBSTR(${1:string_expr},${2:beg_expr},${3:length_expr})'
+	'Truncate blanks':
+		'prefix': 'TRUNC'
+		'body': 'TRUNC(${1:string_expr})'
+	'Convert to upper cases':
+		'prefix': 'UPCASE'
+		'body': 'UPCASE(${1:string_expr})'
+	'Return true when EOF is detected':
+		'prefix': 'EOFILE'
+		'body': 'EOFILE'
+	'Output user defined error message':
+		'prefix': 'CVERROR'
+		'body': 'CVERROR(${1:error_msg},${2:cont_line})'
+	'Output user defined warning message':
+		'prefix': 'CVWARNING'
+		'body': 'CVWARNING(${1:warning_msg},${2:cont_line})'
+	'Output information message within 256 characters':
+		'prefix': 'CVPUTREC'
+		'body': 'CVPUTREC(${1:string_expr})'
+	'Return the thread number of the calling Macro-PLUS code':
+		'prefix': 'THREADNUM'
+		'body': 'THREADNUM'
+	'Indicates whether the calling Macro-PLUS codeis in a parallel region or in a serial region':
+		'prefix': 'INPARALLEL'
+		'body': 'INPARALLEL'
+	'Return true if specified UDF exists':
+		'prefix': 'ISFCT'
+		'body': 'ISFCT(${1:string_expr})'
+	'Return true if specified local variable exists':
+		'prefix': 'ISLCL'
+		'body': 'ISLCL(${1:string_expr})'
+	'Return true if specified global variable exists':
+		'prefix': 'ISGBL'
+		'body': 'ISGBL(${1:string_expr})'
