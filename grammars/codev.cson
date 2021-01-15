@@ -1,4 +1,4 @@
-# NOTE: Caret(^) is included to word border characters in Atom, while recognized as the prefix of user defined variable in CodeV.
+# NOTE: Atom recognizes caret(^) as a word border character, while CodeV recognizes it as the prefix of user defined variable.
 
 'comment': 'CodeV Macro-plus language support in Atom'
 'name': 'CodeV'
@@ -133,7 +133,7 @@
                            f: field
                            g: global
                            i: row
-                           j: cloumn
+                           j: column
                            l: label
                            q: format
                            r: ray
@@ -282,7 +282,7 @@
    'functions':
       'patterns':[
          {
-            'match': '(^|;|\\(|,|\\s|[\\-\\+\\*\\/\\\\=])((?i)ARR_TO_BUF|AS_BUILT_ABC|AS_BUILT_VAR|ASINF|ATANF|BUF_TO_ARR|CONCAT|COSF|EXPF|FFT1DCA|FFT1DCB|FFT2DCA|FFT2DCB|FITERROR|GAUSSBEAM|GAUSSWTS|GET_COMPLEX_MAGNITUDE|GET_IMAGINARY_PART|GET_REAL_PART|GetDim1num|GetDim2num|INDEX|INPARALLEL|INT_DEPART|ISFCT|ISGBL|ISLCL|LENSTR|LOCSTR|LOG10F|LOGF|LOWCASE|MAXF|MINF|MODF|MTF_1FLD|NORMRADIUS|NUM_TO_STR|PAD_REAL_TO_COMPLEX|POLGRID|RANDF|RAYPOL|RAYRSI|RAYSIN|RAYTRA|ReDimNum|RFSTR|RMS_1FLD|RMSSPOT|RMSWE|ROUNDF|SAGF|SASF|SCALE_REAL_ARRAY|SDERIVF|SIGNF|SINF|SPOTDATA|SQRTF|STDEV|STR_TO_NUM|SUBSTR|SUMF|SURFSAGD|SVD|TANF|TRA_1FLD|TRANSFORM|TRUNC|UPCASE|ZERNIKE|ZERNIKEGQ|ZFRCOEF|ZFRFIT|ZRNFIT)\\b'
+            'match': '(^|;|\\(|,|\\s|[\\-\\+\\*\\/\\\\=])((?i)ABSF|ACOSF|ARR_TO_BUF|AS_BUILT_ABC|AS_BUILT_VAR|ASINF|ATANF|BUF_TO_ARR|CONCAT|COSF|EXPF|FFT1DCA|FFT1DCB|FFT2DCA|FFT2DCB|FITERROR|GAUSSBEAM|GAUSSWTS|GET_COMPLEX_MAGNITUDE|GET_IMAGINARY_PART|GET_REAL_PART|GetDim1num|GetDim2num|INDEX|INPARALLEL|INT_DEPART|ISFCT|ISGBL|ISLCL|LENSTR|LOCSTR|LOG10F|LOGF|LOWCASE|MAXF|MINF|MODF|MTF_1FLD|NORMRADIUS|NUM_TO_STR|PAD_REAL_TO_COMPLEX|POLGRID|RANDF|RAYPOL|RAYRSI|RAYSIN|RAYTRA|ReDimNum|RFSTR|RMS_1FLD|RMSSPOT|RMSWE|ROUNDF|SAGF|SASF|SCALE_REAL_ARRAY|SDERIVF|SIGNF|SINF|SPOTDATA|SQRTF|STDEV|STR_TO_NUM|SUBSTR|SUMF|SURFSAGD|SVD|TANF|TRA_1FLD|TRANSFORM|TRUNC|UPCASE|ZERNIKE|ZERNIKEGQ|ZFRCOEF|ZFRFIT|ZRNFIT)\\b'
             'captures':
                '2':
                   'name': 'support.function.built-in.codev'
