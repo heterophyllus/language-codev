@@ -1,18 +1,13 @@
 {
   "name": "language-codev",
   "description": "CodeV Macro-Plus language support in Atom",
-  "keywords":[
-    "CodeV",
-    "CODE V"
-  ],
   "version": "0.2.0",
   "engines": {
     "atom": "*"
   },
-  "author": "Hiiragi <heterophyllus.work@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heterophyllus/language-CodeV.git"
+    "url": "https://github.com/heterophyllus/language-codev.git"
   },
   "license": "MIT"
 }
